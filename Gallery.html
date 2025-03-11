@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Gallery | Burger Bastion</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+/*General Styling*/
+
+
+        
+        .midsection {
+                margin-left:.5%;
+        }
+
+        @media (max-width: 960px) {
+            .midsection {
+                margin-left: 2%;
+            }
+        }
+        
+  
+        
+/*Modal Lightbox popup CSS Aquired from W3Schools*/
+
+
+
+
+        .row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.485);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  max-width: 1200px;
+}
+
+@media (max-width: 960px) {
+    .modal-content {
+        width: 90%
+    }
+    
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+    <!--Common Top Bar w Links, Dropdown Bar, & Image Map-->
+    
+    <header>
+    
+        <div class="topBarContent">
+            <img src="images/LOGO.png" alt="Burger Bastion Logo" usemap="#logo">
+         
+            <map name="logo">
+                <area shape=rect coords="0,0,499,499" href="index.html">
+            </map>
+        
+        </div>
+        
+        <div class="topBarContent">
+            <p>Burger Bastion</p>
+        </div>
+    
+        <div class="topBarContent">
+            <p>|</p>
+        </div>
+        
+        <div class="topBarContent">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Menu</a>
+                  <div class="dropdown-content">
+                    <a href="Products or Services.html">Featured</a>
+                    <a href="Burgers.html">Burgers</a>
+                    <a href="Drinks.html">Drinks</a>
+                    <a href="otherDishes.html">Snacks</a>
+                  </div>
+                </li>
+            </ul>
+        </div>
+        
+        </header>
+
+<!--Two Tables containing images-->
+
+<div class="midsection">
+
+    <h1>Gallery</h1>
+
+    <p style="text-indent: 50px;">Inspect the lively interior of our restaurant! We have inspected our designs down to the finest details. Making sure that our customers get the best experience while they dine with us...</p>
+
+<!--Images double as lightbox modal elements. Parts aquired from W3Schools.com -->
+
+    <table class="midsection-table">
+        <tr>
+            <td><img src="images/interior_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="interior 1"></td>
+            <td><img src="images/moa_burger.png" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Halo Moa Burger"></td>
+            <td><img src="images/interior_2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="interior 2"></td>
+        </tr>
+        <tr>
+            <td><img src="images/stuffedGarlicBread.jfif" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="able image 10"></td>
+            <td><img src="images/ChickenChurgr.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" alt="table image 11"></td>
+            <td><img src="images/tripleBurrito.jpeg" onclick="openModal();currentSlide(6)" class="hover-shadow" alt="table image 12"></td>
+        </tr>
+        <tr>
+            <td><img src="images/IcedTea.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow" alt="table image 13"></td>
+            <td><img src="images/HotDoggos.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow" alt="table image 14"></td>
+            <td><img src="images/istockphoto.comfloatingburger.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow" alt="table image 15"></td>
+        </tr>
+
+
+    </table>
+
+    <h1>Featured Photos</h1>
+
+    <p style="text-indent: 50px;">The dishes pictured below are some of which we're the most proud of!</p>
+
+        <table class="midsection-table">
+            <tr>
+                <td><img src="images/BaconBeast.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow" alt="table image 1"></td>
+                <td><img src="images/burger_2.jpg" alt="table image 3"></td>
+                <td><img src="images/BeefBus.jpg" alt="table image 2"></td>
+            </tr>
+            <tr>
+                <td><img src="images/burger_3.jpg" alt="table image 4"></td>
+                <td><img src="images/Burger5.jpg" alt="table image 5"></td>
+                <td><img src="images/carousel1.jpg" alt="table image 6"></td>
+            </tr>
+            <tr>
+                <td><img src="images/carousel2.jpg" alt="table image 7"></td>
+                <td><img src="images/challenge.jpg" alt="table image 8"></td>
+                <td><img src="images/CHEESYSANDWICH.jpg" alt="table image 9"></td>
+            </tr>
+    
+        </table>
+    
+</div>
+
+<footer>
+</div>
+
+<div class="BottomBarContent">
+    <p>© 2025 Burger Bastion</p>
+</div>
+
+<div class="BottomBarContent">
+    <p>|</p>
+</div>
+
+<div class="BottomBarContent">
+    <ul>
+        <li><a href="Gallery.html">Back to Top</a></li>
+        <li><a href="Contact Us!.html">Contact us!</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+    </ul>
+</div>
+</footer>
+
+<!-- The Modal/Lightbox. Aquired from W3School.com -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="images/interior_1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="images/moa_burger.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="images/interior_2.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="images/stuffedGarlicBread.jfif" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="images/ChickenChurgr.jpg" style="width:100%">
+      </div>
+  
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 10</div>
+        <img src="images/tripleBurrito.jpeg" style="width:100%">
+      </div>
+  
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="images/IcedTea.jpg" style="width:100%">
+      </div>
+  
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="images/HotDoggos.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="images/istockphoto.comfloatingburger.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="images/BaconBeast.jpg" style="width:100%">
+      </div>
+  
+  
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+    </div>
+  </div>
+
+<!--Javascript for the Modal. Aquired from W3Schools.com-->
+
+<script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+
+</body>

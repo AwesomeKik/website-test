@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Contact Information | Burger Bastion</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet" >
+    <link href="formsStyles.css" rel="stylesheet" >
+</head>
+<body>
+
+    <!--Common Top Bar w Links, Dropdown Bar, & Image Map-->
+    
+    <header>
+    
+        <div class="topBarContent">
+            <img src="images/LOGO.png" alt="Burger Bastion Logo" usemap="#logo">
+         
+            <map name="logo">
+                <area shape=rect coords="0,0,499,499" href="index.html">
+            </map>
+        
+        </div>
+        
+        <div class="topBarContent">
+            <p>Burger Bastion</p>
+        </div>
+    
+        <div class="topBarContent">
+            <p>|</p>
+        </div>
+        
+        <div class="topBarContent">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Menu</a>
+                  <div class="dropdown-content">
+                    <a href="Products or Services.html">Featured</a>
+                    <a href="Burgers.html">Burgers</a>
+                    <a href="Drinks.html">Drinks</a>
+                    <a href="otherDishes.html">Snacks</a>
+                  </div>
+                </li>
+            </ul>
+        </div>
+        
+        </header>
+    
+<div class="midsection"> 
+    
+    <br />
+    <hr />
+    <br />
+    <br />
+
+    <center>
+
+        <h1 style="font-size: 300%;">Find us!</h1>
+    
+        <br />
+    
+        <table>
+    
+            <!--iframe map-->
+            <tr>
+                <td>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.6203290222284!2d55.278182301502675!3d25.19715722518733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85c07%3A0xa5eda9fb3c93b69d!2sDubai%20Mall!5e1!3m2!1sen!2sae!4v1741529355277!5m2!1sen!2sae" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </td>
+    
+            <!--Text next to it-->
+                <td style="padding: 50px">
+                    <p style="font-size: 150%;"><b>Dubai Mall, Dubai, United Arab Emirates</b></p>     
+                </td>
+            </tr>
+        </table>
+    
+        </center>
+        
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <br />
+
+<!--Start of Form-->
+
+<div class="container">
+
+<form method="post" action="mailto:ebblancaflor@mapua.edu.ph" autocomplete="on">
+
+<fieldset>
+        <legend align="center"><strong>CONTACT FORM</strong></legend>
+        <hr />
+        <br />
+        <br />
+
+        <label for="name">NAME:</label> 
+        <input type=text name="name" size=15  maxlength=20>
+
+        <br />
+
+        <label for="gender">SEX:</label>
+        <input type="radio" name="gender" value="lalake">Male
+        <input type="radio" name="gender" value="babae">Female
+<br />
+<br />
+
+<label for="socialmed">How did you discover about us?</label> 
+<input type="checkbox" name="discover" id="socialmed" value="TikTok">TikTok
+<input type="checkbox" name="discover" id="socialmed" value="YouTube">YouTube
+<input type="checkbox" name="discover" id="socialmed"  value="Instagram">Instagram
+<input type="checkbox" name="discover" id="socialmed" value="Twitter/X">X <i>(Formerly Twitter)</i>
+<input type="checkbox" name="discover" id="socialmed"  value="Other">Other
+<br />
+
+<label for="share">Would you share Burger Bastion to your friends?</label>
+
+<select name="share" id="share">
+ <option></option>
+ <option>Would happily do</option>
+ <option>Yes</option>
+ <option>Not decided</option>
+ <option>No</option>
+</select>
+    
+
+
+
+<!--SUGGESTIONS BOX-->
+    <fieldset>
+    <legend align="center">Suggestions</legend>
+
+    <br />
+
+    <p align="center">*This section is optional*</p>
+
+    <br />
+        <h3 align="center"><i>You have any additional comments or suggestions? Feel free to answer below:</i></h3>
+<br />
+
+<label for="customerSatisfaction">Were you satisfied with our services?</label>
+
+    <select name="customerSatisfaction" id="customerSatisfaction">
+        <option></option>
+        <option>Extremely</option>
+        <option>Good</option>
+        <option>Somewhat</option>
+        <option>Dissatisfied</option>
+    </select>
+<br />
+    <br />
+        <textarea rows=10  cols=90 id="suggest">type here, give your thoughts...</textarea>
+   <br />
+
+<p align="center">If you were not satisfied, please answer the additional questions in the complaints box.</p>
+</fieldset>
+
+
+<!--COMPLAINTS BOX-->
+<br />
+    <fieldset>
+        <legend align="center">Complaints</legend>
+<label for="employeeComplaint">Select Complaint Type:</label>
+
+<select name="employeeComplaint" id="employeeComplaint">
+    <option></option>
+    <option>Billing/Technical Issue</option>
+    <option>Service Issue</option>
+    <option>Home Tour Issue</option>
+    <option>Staff Behaviour</option>
+</select>
+
+<div>
+    <label for="urgency">How Urgent is your request?</label>
+        <input type="radio" name="urgency" value="immediete">Immediete
+        <input type="radio" name="urgency" value="Extremely High">Extremely High
+        <input type="radio" name="urgency" value="High">High
+        <input type="radio" name="urgency" value="Medium">Medium
+        <input type="radio" name="urgency" value="Low">Low
+</div>
+
+<br />
+<br />
+
+<label for="browser">If Billing/Technical Issue, Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<br />
+
+<p for="suggestImprovement">Which services are suggested for improvement?</p>
+
+        <textarea rows=5  cols=90 name="suggestImprovement" id="suggestImprovement">type here...</textarea>
+
+<p for="suggestOtherServices">How Satisfactory were our other services?</p>
+
+        <textarea rows=5  cols=90 name="suggestOtherServices" id="suggestOtherServices">type here...</textarea>
+
+        <br />
+        <br />
+
+    </fieldset>
+
+
+    <br />
+    <br />
+
+<div>
+    <input type=submit value=submit>
+    <input type=reset value=reset>  
+</div>
+<br />
+<br />
+
+</form>
+
+</div>
+
+        <br />
+
+
+    </div>
+
+    <footer>
+    </div>
+    
+    <div class="BottomBarContent">
+        <p>© 2025 Burger Bastion</p>
+    </div>
+
+    <div class="BottomBarContent">
+        <p>|</p>
+    </div>
+    
+    <div class="BottomBarContent">
+        <ul>
+            <li><a href="Contact Us!.html">Back to Top</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Testimonials.html">Testimonials</a></li>
+        </ul>
+    </div>
+    </footer>
+    
+    </body>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Home | Burger Bastion</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Css & Javascript for Carousel. Aquired from W3Schools.com-->
+
+        <style>
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 100%;
+        max-height: 1000px;
+        margin: auto;
+        box-sizing:border-box
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+        display: none;
+        }
+
+        .mySlides img {
+            object-fit: cover;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position:absolute;
+        background-color: rgba(44, 44, 44, 0.516);
+        margin-left: 8%;
+        margin-right: 8%;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.835);
+        }
+
+        /* Carousel Header text */
+        .text-header {
+        color: rgb(255, 32, 39);
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: larger;
+        top: 65%;
+        text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.633);
+        }
+
+
+        /* Carousel Caption text */
+        .text {
+        color: #ffffff;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: larger;
+        top: 75%;
+        text-shadow: 3px 3px 5px black;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        </style>
+
+</head>
+<body>
+
+    <!--Common Top Bar w Links & Image Map-->
+    
+    <!--Common Top Bar w Links, Dropdown Bar, & Image Map-->
+    
+    <header>
+    
+        <div class="topBarContent">
+            <img src="images/LOGO.png" alt="Burger Bastion Logo" usemap="#logo">
+         
+            <map name="logo">
+                <area shape=rect coords="0,0,499,499" href="index.html">
+            </map>
+        
+        </div>
+        
+        <div class="topBarContent">
+            <p>Burger Bastion</p>
+        </div>
+    
+        <div class="topBarContent">
+            <p>|</p>
+        </div>
+        
+        <div class="topBarContent">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Menu</a>
+                  <div class="dropdown-content">
+                    <a href="Products or Services.html">Featured</a>
+                    <a href="Burgers.html">Burgers</a>
+                    <a href="Drinks.html">Drinks</a>
+                    <a href="otherDishes.html">Snacks</a>
+                  </div>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+    <img src="images/carousel1.jpg" style="width:100%" height="700px">
+        <div class="text-header"><h1>All-Natural</h1></div>
+        <div class="text"><h3>Our burgers use organic ingredients from trusted farms; our farms!</h3></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/carousel2.jpg" style="width:100%" height="700px">
+      <div class="text-header"><h1>Quick Serving Times</h1></div>
+      <div class="text"><h3>Guaranteed that your order will arrived within 9 minutes tops!</h3></div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+  <!--Slideshow Javascript-->
+
+        <script>
+
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                }
+
+        </script>
+
+<!--Rest of the content/end of carousel code-->
+
+    <br />
+
+    <hr />
+
+    <br />
+
+<div class="midsection">
+
+<div class="founderQuote" style="max-width: 50%; margin: auto;">
+    <center>
+    <img src="images/LOGO.png" width="150px" height="150px" alt="Burger Bastion Logo">
+    <h1>About us</h1>
+
+    <q style="font-size:150%; font-family:Georgia, 'Times New Roman', Times, serif; text-shadow: 2px 2px 5px black;">
+        <b>Delicious food is one of the best things we can experience in life. Everyone should experience the same happiness I feel when I eat.</b>
+    </q>
+    </center>
+
+    <h2 align="right"> - Our Founder, Franco Castillo</h2>
+</div>
+
+    <br />
+    <br />
+    <br />
+
+
+
+
+    <h1 style="font-size: 300%;">Our Mission</h1>
+
+    <p style="font-size: 150%; "><b>At Burger Bastion, our aim is to give you a sense of satisfaction and excitement when you step into our restaurant, you'll feel calm and relaxed. We at Burger Bastion pride our excellent services and superb burger selection. Our founder, Franco Castillo, aimed for a "burger cafe". Where you enjoy our award winning dishes while you "chillax".</b></p>
+
+    <br />
+    <br />
+    <br />
+
+    <h1 style="font-size: 300%;">Our Partners</h1>
+    <p style="font-size: 150%; "><b>Companies that share services and products with us.</b></p>
+    <hr />
+    <br />
+
+    <!--Partners-->
+
+    <table style="background-color:azure; padding: 50px; border-radius: 20px;" width="100%">
+        <tr>
+            <td>
+                <img class="partner" src="images/BurgerKing.png"  style="margin-left: 120px;" width="250" height="auto" alt="burgerking"
+                usemap="#BurgerKing">
+            </td>
+
+            <map name="BurgerKing">
+                <area shape=rect coords="0,0,1996,2017" href="https://www.bk.com/corp-respon" target="_blank">
+            </map>
+
+            <td>
+                <img class="partner" src="images/StarbucksLogo.png"  width="250" height="auto" alt="starbucks"
+                usemap="#Starbucks">                    
+            </td>
+
+            <map name="Starbucks">
+                <area shape=rect coords="0,0,1018,1020" href="https://www.starbucksbenefits.com/en-us/home/" target="_blank">
+            </map>
+
+            <td>
+                <img class="partner" src="images/ApplePay.png"  width="250" height="auto" alt="applepay"
+                usemap="#ApplePay">
+            </td>
+
+            <map name="ApplePay">
+                <area shape=rect coords="0,0,794,598" href="https://developer.apple.com/apple-pay/payment-platforms/" target="_blank">
+            </map>
+
+        </tr>
+    </table>
+
+
+<center>
+    <p style="font-size: 150%; "><h1>What do our various customers have to say about our services?</b></h1>
+
+    <div class="gallery-testimonials">
+        <a href="Testimonials.html" class="gallery-testimonials">
+            <div class="desc"><q>This is by far the best restuarant I have been to. The food here is awesome! The staff were nice. 10/10 would visit again, no complaints.</q></div>
+            <div class="desc"><p>-  Guy Goodman</p></div>
+        </a>
+    </div>
+
+    <div class="gallery-testimonials">
+        <a href="Testimonials.html" class="gallery-testimonials">
+            <div class="desc"><q>Food here is plain out bad. You using ORGANIC FOOD?! They say those have goverment brain control chemicals! My sources are LEGIT!</q></div>
+            <div class="desc"><p>-   Ima Crayzee</p></div>
+        </a>
+    </div>
+
+</center>
+
+<center>
+        <div class="justabutton">
+            <a href="Contact Us!.html" class="justabutton">
+                <div><h4>Have question? We'll gladly answer!</h4></div>
+            </a>
+        </div>
+
+</center>
+
+</div>
+
+    <footer>
+</div>
+    
+    <div class="BottomBarContent">
+        <p>© 2025 Burger Bastion</p>
+    </div>
+
+    <div class="BottomBarContent">
+        <p>|</p>
+    </div>
+    
+    <div class="BottomBarContent">
+        <ul>
+            <li><a href="index.html">Back to Top</a></li>
+            <li><a href="Contact Us!.html">Contact us!</a></li>
+            <li><a href="Testimonials.html">Testimonials</a></li>
+        </ul>
+    </div>
+    </footer>
+
+    </body>
